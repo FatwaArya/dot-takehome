@@ -1,54 +1,89 @@
-# React + TypeScript + Vite
+# E-commerce & Task Management Application For DOT Take Home Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web application built with React, TypeScript, and Vite that combines e-commerce functionality with task management capabilities.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Product Catalog**: Browse and search for products
+- **Product Details**: View detailed information about products
+- **Shopping Cart**: Add products to cart and manage quantities
+- **User Authentication**: Register and login functionality
+- **Task Management**: Create, complete, and filter tasks
+- **Responsive Design**: Works on desktop and mobile devices
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend**: React 19 with TypeScript
+- **Routing**: TanStack Router
+- **State Management**: Zustand
+- **Data Fetching**: TanStack Query (React Query)
+- **Styling**: Styled Components and Radix UI
+- **Build Tool**: Vite
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or later recommended)
+- pnpm (or npm/yarn)
+
+### Installation
+
+1. Clone the repository:
+   ```
+   git clone <repository-url>
+   cd <project-directory>
+   ```
+
+2. Install dependencies:
+   ```
+   pnpm install
+   ```
+   Or if using npm:
+   ```
+   npm install
+   ```
+
+### Running the Development Server
+
+To start the development server:
+
+```
+pnpm dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+This will start the application at `http://localhost:5173` (or another port if 5173 is in use).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Building for Production
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+To create a production build:
+
 ```
+pnpm build
+```
+
+The build artifacts will be stored in the `dist/` directory.
+
+To preview the production build locally:
+
+```
+pnpm preview
+```
+
+## Project Structure
+
+- `src/components/` - Reusable UI components
+- `src/routes/` - Route definitions and page components
+- `src/hooks/` - Custom React hooks
+- `src/store/` - Global state management
+- `src/services/` - API services and data fetching
+- `src/types/` - TypeScript type definitions
+- `src/styles/` - Global styles and theme configuration
+- `src/utils/` - Utility functions
+
+## Available Scripts
+
+- `pnpm dev` - Start the development server
+- `pnpm build` - Build the app for production
+- `pnpm lint` - Run ESLint to check code quality
+- `pnpm preview` - Preview the production build locally

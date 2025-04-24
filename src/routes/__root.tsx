@@ -84,6 +84,9 @@ export const Route = createRootRoute({
             <NavLink to="/about" activeProps={{ className: 'active' }}>
               About
             </NavLink>
+            <NavLink to="/tasks" activeProps={{ className: 'active' }}>
+            Tasks management
+            </NavLink>
           </NavLinks>
           
           <AuthLinks>
