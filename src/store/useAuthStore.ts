@@ -59,6 +59,9 @@ export const useAuthStore = create<AuthState>()(
           await new Promise(resolve => setTimeout(resolve, 1000));
 
           // Simulating a successful registration
+          // Use password in a real app implementation
+          console.log(`Would register with password: ${password}`);
+          
           set({
             user: { id: '1', email, name },
             isAuthenticated: true,

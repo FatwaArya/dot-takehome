@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, CSSProperties } from 'react';
 import { styled } from 'styled-components';
 
 interface ButtonProps {
@@ -7,6 +7,7 @@ interface ButtonProps {
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
+  style?: CSSProperties;
 }
 
 const StyledButton = styled.button<{ variant: string }>`
@@ -54,10 +55,17 @@ export const Button = ({
   variant = 'primary',
   onClick,
   type = 'button',
-  disabled
+  disabled,
+  style
 }: ButtonProps) => {
   return (
-    <StyledButton variant={variant} onClick={onClick} type={type} disabled={disabled}>
+    <StyledButton 
+      variant={variant} 
+      onClick={onClick} 
+      type={type} 
+      disabled={disabled}
+      style={style}
+    >
       {children}
     </StyledButton>
   );
